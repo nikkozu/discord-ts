@@ -1,0 +1,34 @@
+{
+  "name": "discord-ts",
+  "version": "1.0.0",
+  "description": "discord bot using typescript",
+  "main": "src/index.ts",
+  "scripts": {
+    "compile": "node bin/compile.js",
+    "lint": "node bin/lint.js",
+    "lint:fix": "npm run lint -- fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikkozu/discord-ts.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "Rin!",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nikkozu/discord-ts/issues"
+  },
+  "homepage": "https://github.com/nikkozu/discord-ts#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "typescript": "^4.6.2"
+  }
+}
