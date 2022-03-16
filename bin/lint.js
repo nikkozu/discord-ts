@@ -4,7 +4,7 @@ const { log, time, timeEnd, error } = require("console");
 (async () => {
     try {
         const argv = process.argv.slice(2);
-        const command = "eslint --ignore-path .gitignore 'src/**/*'";
+        const command = "eslint --ext ts .";
 
         log("[LINT] Starting lint command...");
 

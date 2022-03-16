@@ -10,10 +10,7 @@ plugins:
   - '@typescript-eslint'
 parserOptions:
   ecmaVersion: latest
-  project: 
-    - 'tsconfig.json'
-ignorePatterns:
-  - 'bin/**/*'
+  project: 'tsconfig.json'
 rules:
   indent:
     - error
