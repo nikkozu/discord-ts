@@ -24,7 +24,7 @@ const { log, time, timeEnd, error } = require("console");
         timeEnd("[LINT] Linter time");
     } catch (err) {
         if (err.code === 1) {
-            log("[LINT] Error has occurred on your code! Use `lint:fix` command to fix the error!");
+            log("[LINT] Error has occurred on your code!");
             timeEnd("[LINT] Linter time");
             return;
         }

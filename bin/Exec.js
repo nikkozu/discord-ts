@@ -26,12 +26,13 @@ module.exports.exec = (command, { capture = false, echo = false } = {}) => {
         });
 
         childProcess.on("close", (code) => {
-            if (code > 0)
+            if (code > 0) {
                 return reject({
                     code: code,
-                    error: `Command failed with code ${code}`,
+                    error: `Command failed with code ${code}`
                 });
-
+            }
+            
             resolve({ code: code, data: stdout });
         });
     });

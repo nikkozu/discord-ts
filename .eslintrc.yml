@@ -12,15 +12,127 @@ parserOptions:
   ecmaVersion: latest
   project: 'tsconfig.json'
 rules:
-  indent:
+  # typescript-eslint
+  ## Fixable rules
+  '@typescript-eslint/array-type':
     - error
-    - 4
+    - default: array-simple
+  '@typescript-eslint/brace-style':
+    - warn
+    - 1tbs
+  '@typescript-eslint/comma-dangle':
+    - warn
+    - never
+  '@typescript-eslint/comma-spacing':
+    - warn
+    - before: false
+      after: true
+  '@typescript-eslint/consistent-type-definitions':
+    - error
+    - interface
+  '@typescript-eslint/consistent-type-imports':
+    - error
+    - prefer: type-imports
+  '@typescript-eslint/func-call-spacing':
+    - warn
+    - never
+  '@typescript-eslint/indent':
+    - error
+    - 2
+    - ignoreComments: true
+      SwitchCase: 1
+  '@typescript-eslint/keyword-spacing':
+    - warn
+    - before: true
+      after: true
+  '@typescript-eslint/lines-between-class-members':
+    - warn
+    - always
+    - exceptAfterSingleLine: true
+  '@typescript-eslint/member-delimiter-style':
+    - warn
+  '@typescript-eslint/method-signature-style':
+    - warn
+  '@typescript-eslint/no-confusing-non-null-assertion':
+    - error
+  '@typescript-eslint/no-extra-parens':
+    - warn
+    - all
+  '@typescript-eslint/no-unnecessary-boolean-literal-compare':
+    - error
+    - allowComparingNullableBooleansToTrue: false
+      allowComparingNullableBooleansToFalse: false
+  '@typescript-eslint/no-unnecessary-condition':
+    - warn
+  '@typescript-eslint/object-curly-spacing':
+    - error
+    - always
+  '@typescript-eslint/padding-line-between-statements':
+    - error
+    - blankLine: always
+      prev: "*"
+      next: "return"
+  '@typescript-eslint/promise-function-async':
+    - error
+  '@typescript-eslint/quotes':
+    - error
+    - double
+    - allowTemplateLiterals: true
+      avoidEscape: false
+  '@typescript-eslint/semi':
+    - error
+    - always
+  '@typescript-eslint/space-before-function-paren':
+    - error
+    - never
+  '@typescript-eslint/space-infix-ops':
+    - error
+    - int32Hint: false
+  '@typescript-eslint/type-annotation-spacing':
+    - warn
+
+  ## Not Fixable Rules
+  '@typescript-eslint/explicit-function-return-type':
+    - error
+  '@typescript-eslint/explicit-module-boundary-types':
+    - error
+  '@typescript-eslint/no-duplicate-imports':
+    - error
+  '@typescript-eslint/no-invalid-this':
+    - error
+    - capIsConstructor: true
+  '@typescript-eslint/no-loop-func':
+    - error
+  '@typescript-eslint/no-non-null-asserted-nullish-coalescing':
+    - warn
+  '@typescript-eslint/no-throw-literal':
+    - error
+  '@typescript-eslint/no-unused-vars':
+    - warn
+  '@typescript-eslint/no-useless-constructor':
+    - error
+  '@typescript-eslint/no-require-imports':
+    - error
+  '@typescript-eslint/prefer-enum-initializers':
+    - warn
+  '@typescript-eslint/prefer-for-of':
+    - warn
+  '@typescript-eslint/prefer-nullish-coalescing':
+    - warn
+  '@typescript-eslint/prefer-optional-chain':
+    - warn
+  '@typescript-eslint/switch-exhaustiveness-check':
+    - warn
+  '@typescript-eslint/unified-signatures':
+    - warn
+
+  # eslint
+  consistent-return:
+    - error
   linebreak-style:
     - error
     - unix
-  quotes:
-    - error
-    - double
-  semi:
-    - error
-    - always
+  object-curly-spacing:
+    - off
+  prefer-const: 
+    - off
